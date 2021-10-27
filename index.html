@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -20,7 +21,8 @@
           <div class="clearfix">
             <div class="float-left weather-today">
               <img src="src/sunny.png" alt="sunny" />
-              <strong>9</strong><span class="units">°C|°F</span>
+              <strong id="temperatureToday"></strong
+              ><span class="units">°C|<a href="#">°F</a></span>
             </div>
           </div>
         </div>
@@ -32,24 +34,24 @@
                   Precipitation: 1%
                 </ul>
                 <ul>
-                  Humidity: 55%
+                  Humidity:
+                  <span id="humidityToday"></span
+                  >%
                 </ul>
                 <ul>
-                  Wind: 13 km/h
+                  Wind:
+                  <span id="windToday">13</span>
+                  km/h
                 </ul>
               </li>
             </div>
           </div>
         </div>
         <div class="col-6 right-position">
-          <h1>Gorizia</h1>
+          <h1 id="city"></h1>
           <li>
-            <ul>
-              Tuesday 07:00
-            </ul>
-            <ul>
-              Sunny
-            </ul>
+            <ul id="dateToday"></ul>
+            <ul id="descriptionToday"></ul>
           </li>
         </div>
       </div>

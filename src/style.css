@@ -26,6 +26,10 @@ li {
   top: 11px;
 }
 
+.weather-today a {
+  text-decoration: none;
+}
+
 .weather-today-details {
   color: #70757a;
   font-size: 12px;
@@ -65,4 +69,8 @@ li {
 .right-position ul {
   text-align: right;
   margin-bottom: 0;
+}
+
+#descriptionToday:first-letter {
+  text-transform: capitalize;
 }

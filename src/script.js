@@ -1,9 +1,45 @@
-function displayWeather(response) {
-  alert("done");
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
+
+function displayWeather(response) {
+  console.log(response.data);
+  let city = document.querySelector("#city");
+  city.innerHTML = response.data.name;
+  let temperatureToday = document.querySelector("#temperatureToday");
+  temperatureToday.innerHTML = Math.round(response.data.main.temp);
+  let humidityToday = document.querySelector("#humidityToday");
+  humidityToday.innerHTML = response.data.main.humidity;
+  let windToday = document.querySelector("#windToday");
+  windToday.innerHTML = Math.round(response.data.wind.speed);
+  let descriptionToday = document.querySelector("#descriptionToday");
+  descriptionToday.innerHTML = response.data.weather[0].description;
+  let dateToday = document.querySelector("#dateToday");
+  dateToday.innerHTML = formatDate(response.data.dt * 1000);
+}
+
+let city = "Paris";
 let apiKey = "f81614abe2395d5dfecd45b9298041de";
-let urlApi = `https://api.openweathermap.org/data/2.5/weather?q=Gorizia&appid=${apiKey}&units=metric`;
+let urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-console.log(urlApi);
-
-axios.get(apiUrl).then(displayWeather);
+axios.get(urlApi).then(displayWeather);
