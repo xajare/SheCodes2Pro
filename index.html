@@ -16,11 +16,25 @@
   </head>
   <body>
     <div class="container whole-project">
+        <form id="search-city" class="mb-6">
+         <div class="row">
+           <div class="col-4">
+              <input type="search" placeholder="Type a city" id="text-city" class="form-control input-area" />
+          </div>
+          <div class="col-3">
+            <input type="submit" class="btn btn-info" />
+          </div>
+        </form>
+      </div>
       <div class="row">
         <div class="col-3">
           <div class="clearfix">
             <div class="float-left weather-today">
-              <img src="src/sunny.png" alt="sunny" />
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="sunny"
+                id="icon"
+              />
               <strong id="temperatureToday"></strong
               ><span class="units">°C|<a href="#">°F</a></span>
             </div>
