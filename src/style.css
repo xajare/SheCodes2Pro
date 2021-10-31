@@ -9,7 +9,7 @@ li {
 .whole-project {
   margin: 30px auto;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 0px;
   max-width: 750px;
   border: solid 1px rgb(149, 147, 147);
   border-radius: 4px;
@@ -78,6 +78,12 @@ li {
 .right-position ul {
   text-align: right;
   margin-bottom: 0;
+}
+
+.bottom-line {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 9px;
 }
 
 #descriptionToday:first-letter {
