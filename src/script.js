@@ -46,7 +46,7 @@ function displayWeather(response) {
 
   celsiusTemperature = response.data.main.temp;
 
-  // displayForecast();
+  displayForecast();
 }
 
 function search(city) {
@@ -78,10 +78,32 @@ function displayCelsiusTemperature(event) {
   temperatureToday.innerHTML = Math.round(celsiusTemperature);
 }
 
-/* function displayForecast() {
+function displayForecast() {
   let forecast = document.querySelector("#forecast");
-  forecast.innerHTML = "Forecast";
-} */
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+          <div class="forecast-date">${day}</div>
+          <div class="forecast-img">
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt=""
+              width="48"
+            />
+          </div>
+          <div class="forecast-temperature">
+            <span class="temp-max">11°</span>
+            <span class="temp-min">9°</span>
+          </div>
+        </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", searchCity);
