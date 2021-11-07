@@ -6,13 +6,23 @@ li {
   list-style: none;
 }
 
+a {
+  color: #e96e50;
+}
+
 .whole-project {
   margin: 30px auto;
   padding-top: 60px;
   padding-bottom: 0px;
   max-width: 750px;
-  border: solid 1px rgb(149, 147, 147);
+  border: solid 1px rgb(#e96e50);
   border-radius: 4px;
+  background-color: #455d7a;
+}
+
+.but-color {
+  border-color: #e96e50;
+  background-color: #e96e50;
 }
 
 .row-today {
@@ -35,7 +45,7 @@ li {
 }
 
 .weather-today .active {
-  color: black;
+  color: #212529;
   cursor: default;
 }
 
@@ -44,7 +54,8 @@ li {
 }
 
 .weather-today-details {
-  color: #70757a;
+  color: #e96e50;
+  opacity: 0.8;
   font-size: 12px;
   line-height: 16px;
   padding-top: 24px;
@@ -74,7 +85,8 @@ li {
 
 .right-position li {
   text-align: right;
-  color: #70757a;
+  color: #e96e50;
+  opacity: 0.8;
   font-size: 12px;
   line-height: 16px;
 }
