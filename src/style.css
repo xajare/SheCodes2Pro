@@ -20,7 +20,7 @@ a:hover {
   padding-bottom: 0px;
   max-width: 750px;
   border: solid 1px rgb(#e96e50);
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: #455d7a;
 }
 
@@ -120,8 +120,12 @@ a:hover {
 
 .bottom-line {
   margin-top: 40px;
-  margin-bottom: 0;
+  padding-bottom: 4px;
   font-size: 9px;
+}
+
+.bottom-line p {
+  margin-bottom: 0;
 }
 
 #descriptionToday:first-letter {
