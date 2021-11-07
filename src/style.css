@@ -10,6 +10,10 @@ a {
   color: #e96e50;
 }
 
+a:hover {
+  color: #e96e50;
+}
+
 .whole-project {
   margin: 30px auto;
   padding-top: 60px;
@@ -47,6 +51,7 @@ a {
 .weather-today .active {
   color: #212529;
   cursor: default;
+  font-weight: bold;
 }
 
 .weather-today .active:hover {
