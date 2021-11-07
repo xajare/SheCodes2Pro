@@ -15,6 +15,10 @@ li {
   border-radius: 4px;
 }
 
+.row-today {
+  margin-bottom: 60px;
+}
+
 .weather-today img {
   width: 60px;
   height: 60px;
@@ -78,6 +82,23 @@ li {
 .right-position ul {
   text-align: right;
   margin-bottom: 0;
+}
+
+.col-2 {
+  text-align: center;
+}
+
+.forecast-date {
+  text-align: center;
+  font-size: 16px;
+}
+
+.forecast-img img {
+  width: 48px;
+}
+
+.forecast-temperature {
+  font-size: 12px;
 }
 
 .bottom-line {

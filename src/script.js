@@ -45,6 +45,8 @@ function displayWeather(response) {
   );
 
   celsiusTemperature = response.data.main.temp;
+
+  // displayForecast();
 }
 
 function search(city) {
@@ -75,6 +77,11 @@ function displayCelsiusTemperature(event) {
   celsiusLink.classList.add("active");
   temperatureToday.innerHTML = Math.round(celsiusTemperature);
 }
+
+/* function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = "Forecast";
+} */
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", searchCity);
